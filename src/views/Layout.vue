@@ -1,21 +1,15 @@
 <template>
-  <div id="app">
+  <div>
+    <h1>Hello</h1>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-
-export default {
-  name: 'App',
-  components: {
-    
-  }
+export default{
+  name: 'Layout',
 }
 </script>
 
 <style>
-#app {
-
-}
 </style>
