@@ -45,3 +45,12 @@ Mock.mock('/getTable', 'get', {
   ]
 })
 
+var login = true
+
+Mock.mock('/CheckLogin', 'get', {'login': login})
+
+Mock.mock('/Login', 'post', function(){
+  return {'login': login}
+})
+
+Mock.mock('/Logout', 'get', {'logout': 'succeeded'})

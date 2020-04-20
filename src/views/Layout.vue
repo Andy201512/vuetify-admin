@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <DashboardList></DashboardList>
+    <NavList></NavList>
 
     <Header></Header>
 
@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import DashboardList from '@/components/DashboardList'
+import NavList from '@/components/NavList'
 import Header from '@/components/Header'
 
 export default{
   name: 'Layout',
   components: {
-    DashboardList,
+    NavList,
     Header
   },
 }

@@ -6,11 +6,8 @@
         <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
       </template>
       <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        <v-list-item @click="logout">
+          <v-list-item-title>logout</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -18,15 +15,19 @@
 </template>
 
 <script>
+import { Logout } from '@/api/api.js'
+
 export default{
   name: 'Header',
-  data: () => ({
-    items: [
-      { title: 'Click Me' },
-      { title: 'Click Me' },
-      { title: 'Click Me' },
-    ],
-  }),
+  methods:{
+    logout() {
+      Logout().then((data) =>{
+        if(data === 'succeeded'){
+          this.$router.push({ name: 'login' })
+        }
+      })
+    }
+  }
 }
 </script>
 

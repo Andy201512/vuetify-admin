@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {GetTable} from '@/api/api.js'
+import { GetTable } from '@/api/api.js'
 
 export default{
   name: 'Table',
