@@ -29,6 +29,7 @@ jobs:
       # 执行npm脚本打包项目
       - name: Install and Build
         run: |
+          rm docs/ -rf
           npm install
           npm run build
           
