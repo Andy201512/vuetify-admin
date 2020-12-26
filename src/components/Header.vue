@@ -1,12 +1,17 @@
 <template>
   <v-app-bar app>
+
+    <v-app-bar-nav-icon v-on:click="$emit('changeNavSwitch')"></v-app-bar-nav-icon>
+
+    <v-toolbar-title>Vuetify Admin</v-toolbar-title>
+
     <v-spacer></v-spacer>
+
     <v-menu offset-y>
       <template v-slot:activator="{ on }">
         <v-btn icon>
           <v-icon v-on="on">mdi-account</v-icon>
         </v-btn>
-        <v-app-bar-nav-icon ></v-app-bar-nav-icon>
       </template>
       <v-list>
         <v-list-item @click="logout">
@@ -14,6 +19,7 @@
         </v-list-item>
       </v-list>
     </v-menu>
+
   </v-app-bar>
 </template>
 

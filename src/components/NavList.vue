@@ -1,5 +1,9 @@
 <template>
-  <v-navigation-drawer app>
+  <v-navigation-drawer 
+    v-model="drawer"
+    app
+  >
+
     <v-list dense nav>
 
       <v-list-item link href="#/dashboard">
@@ -52,6 +56,17 @@
 <script>
 export default{
   name: 'NavList',
+  props: ['navSwitch'],
+  data () {
+      return {
+        drawer: this.drawer,
+      }
+  },
+  watch: {
+    navSwitch: function () {
+      this.drawer = !this.drawer
+    }
+  }
 }
 </script>
 

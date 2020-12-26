@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <div>
-      <NavList></NavList>
-      <Header></Header>
+      <NavList v-bind:navSwitch="navSwitch"></NavList>
+      <Header v-on:changeNavSwitch="onChangeNavSwitch"></Header>
 
       <!-- Sizes your content based upon application components -->
       <v-content>
@@ -32,6 +32,16 @@ export default{
     Header,
     Footer
   },
+  data (){
+    return{
+      navSwitch: true,
+    }
+  },
+  methods: {
+    onChangeNavSwitch() {
+      this.navSwitch = !this.navSwitch
+    }
+  }
 }
 </script>
 
