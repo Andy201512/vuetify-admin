@@ -16,22 +16,21 @@
       </v-container>
     </v-content>
 
-    <v-footer app>
-      <v-spacer></v-spacer>
-      <div>&copy; {{ new Date().getFullYear() }}</div>
-    </v-footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import NavList from '@/components/NavList'
 import Header from '@/components/Header'
+import NavList from '@/components/NavList'
+import Footer from '@/components/Footer'
 
 export default{
   name: 'Layout',
   components: {
     NavList,
-    Header
+    Header,
+    Footer
   },
 }
 </script>

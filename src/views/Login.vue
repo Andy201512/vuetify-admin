@@ -94,8 +94,17 @@ export default{
 }
 </script>
 
-<style>
-#login-form{
-  padding: 160px;
+<style lang="scss">
+@media screen and (min-width: 360px){
+  #login-form{
+    position: relative;
+    top: 100px;
+  }
+}
+@media screen and (min-width: 900px){
+  #login-form{
+    position: relative;
+    top: 160px;
+  }
 }
 </style>

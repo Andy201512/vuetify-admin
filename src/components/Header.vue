@@ -3,7 +3,10 @@
     <v-spacer></v-spacer>
     <v-menu offset-y>
       <template v-slot:activator="{ on }">
-        <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
+        <v-btn icon>
+          <v-icon v-on="on">mdi-account</v-icon>
+        </v-btn>
+        <v-app-bar-nav-icon ></v-app-bar-nav-icon>
       </template>
       <v-list>
         <v-list-item @click="logout">
