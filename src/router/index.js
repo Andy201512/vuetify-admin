@@ -14,10 +14,10 @@ const routes = [
     path: '/', component: () => import ('@/views/Layout'),
     redirect: { name: 'login' },
     children: [
-      {path: 'dashboard', name: 'dashboard', component: () => import ('@/views/Dashboard')},
-      {path: 'table', name: 'table', component: () => import ('@/views/Table')},
-      {path: 'carousels', name: 'carousels', component: () => import ('@/views/Carousels')},
-      {path: 'form', name: 'form', component: () => import ('@/views/Form')},
+      {path: 'dashboard', name: 'dashboard', component: () => import ('@/views/main/Dashboard')},
+      {path: 'table', name: 'table', component: () => import ('@/views/main/Table')},
+      {path: 'carousels', name: 'carousels', component: () => import ('@/views/main/Carousels')},
+      {path: 'form', name: 'form', component: () => import ('@/views/main/Form')},
     ],
   },
   {

@@ -1,59 +1,61 @@
 <template>
-  <div id="login-form">
-    <v-card
-      class="mx-auto"
-      max-width="344"
-    >
-      <v-form 
-        v-model="valid"
-        ref="form"
+  <v-app>
+    <div id="login-form">
+      <v-card
+        class="mx-auto"
+        max-width="344"
       >
-        <v-container>
-          <v-row>
-            <v-col
-              offset="1"
-            >
-              <v-text-field
-                label="用户名"
-                type="text"
-                v-model="userForm.username"
-                :rules="[rules.required]"
-              ></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col
-              offset="1"
-            >
-              <v-text-field
-                label="密码"
-                type="password"
-                v-model="userForm.password"
-                :rules="[rules.required]"
-              ></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col
-              offset="4"
-            >
-              <v-btn
-                @click="login"
+        <v-form 
+          v-model="valid"
+          ref="form"
+        >
+          <v-container>
+            <v-row>
+              <v-col
+                offset="1"
               >
-                登入
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-form>
-    </v-card>
-    <v-snackbar
-      v-model="snackbar"
-      :timeout="2000"
-    >
-      {{ snackbarText }}
-    </v-snackbar>
-  </div>
+                <v-text-field
+                  label="用户名"
+                  type="text"
+                  v-model="userForm.username"
+                  :rules="[rules.required]"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col
+                offset="1"
+              >
+                <v-text-field
+                  label="密码"
+                  type="password"
+                  v-model="userForm.password"
+                  :rules="[rules.required]"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col
+                offset="4"
+              >
+                <v-btn
+                  @click="login"
+                >
+                  登入
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-form>
+      </v-card>
+      <v-snackbar
+        v-model="snackbar"
+        :timeout="2000"
+      >
+        {{ snackbarText }}
+      </v-snackbar>
+    </div>
+  </v-app>
 </template>
 
 <script>

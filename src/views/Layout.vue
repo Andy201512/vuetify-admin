@@ -1,23 +1,23 @@
 <template>
-  <div>
-    
-    <NavList></NavList>
+  <v-app>
+    <div>
+      <NavList></NavList>
+      <Header></Header>
 
-    <Header></Header>
+      <!-- Sizes your content based upon application components -->
+      <v-content>
 
-    <!-- Sizes your content based upon application components -->
-    <v-content>
+        <!-- Provides the application the proper gutter -->
+        <v-container fluid>
 
-      <!-- Provides the application the proper gutter -->
-      <v-container fluid>
+          <!-- If using vue-router -->
+          <router-view></router-view>
+        </v-container>
+      </v-content>
 
-        <!-- If using vue-router -->
-        <router-view></router-view>
-      </v-container>
-    </v-content>
-
-    <Footer></Footer>
-  </div>
+      <Footer></Footer>
+    </div>
+  </v-app>
 </template>
 
 <script>

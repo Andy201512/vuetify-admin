@@ -1,12 +1,14 @@
 <template>
-  <div  id="card-404">
-    <v-card
-      class="mx-auto"
-      max-width="344"
-    >
-      <h1>404 No Found</h1>
-    </v-card>
-  </div>
+  <v-app>
+    <div  id="card-404">
+      <v-card
+        class="mx-auto"
+        max-width="344"
+      >
+        <h1>404 No Found</h1>
+      </v-card>
+    </div>
+  </v-app>
 </template>
 
 <script>
