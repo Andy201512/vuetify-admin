@@ -1,7 +1,11 @@
 <template>
   <v-footer app>
-    <v-spacer></v-spacer>
-    <div>&copy; {{ new Date().getFullYear() }}</div>
+    <v-col
+      class="text-center"
+      cols="12"
+    >
+      &copy; {{ new Date().getFullYear() }}
+    </v-col>
   </v-footer>
 </template>
 
