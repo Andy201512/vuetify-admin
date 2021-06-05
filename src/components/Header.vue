@@ -15,6 +15,9 @@
       </template>
       <v-list>
         <v-list-item @click="logout">
+          <v-list-item-title>{{ user.username }}, 你好!</v-list-item-title>
+        </v-list-item>
+        <v-list-item @click="logout">
           <v-list-item-title>logout</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -25,9 +28,15 @@
 
 <script>
 import { Logout } from '@/api/api.js'
+import store from '@/store'
 
 export default{
   name: 'Header',
+  computed: {
+    user() {
+      return store.state.user
+    }
+  },
   methods:{
     logout() {
       Logout().then((data) =>{

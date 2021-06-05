@@ -60,6 +60,7 @@
 
 <script>
 import { Login } from '@/api/api.js'
+import store from '@/store'
 
 export default{
   name: 'Login',
@@ -82,7 +83,8 @@ export default{
       if(this.$refs.form.validate()){
         Login( this.userForm ).then((data) => {
           if(data === true){
-            this.snackbarText = '登录成功'
+            store.commit('SET_NAME',{ username: this.userForm.username})
+            this.snackbarText = store.state.user.username + '登录成功'
             this.snackbar = true
             this.$router.push({ name: 'dashboard' })
           }else{
